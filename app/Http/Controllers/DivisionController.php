@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Registrar;
+use App\models\Division_Model;
 
-class RegistrationController extends Controller
+class DivisionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,8 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        $data = array(
-            'headline' => "BD Model Test", 
-            'slogan' => "A handy tool to test your skills", 
-        );
-        return view("registration.sign_up")->with($data);
+        $divisions = Division_Model::all();
+        return view("pages.division")->with("divisions", $divisions);
     }
 
     /**
@@ -28,12 +25,7 @@ class RegistrationController extends Controller
      */
     public function create()
     {
-        $data = array(
-            'headline' => "BD Model Test", 
-            'slogan' => "A handy tool to test your skills", 
-        );
-        echo "i am create controller";die("with thanda");
-        return view("registration.sign_up")->with($data);
+        //
     }
 
     /**
@@ -44,15 +36,15 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        $registrar = new Registrar;
-        $registrar->name = $request->input("full_name");
-        $registrar->email = $request->input("email");
-        $registrar->phone = $request->input("phone");
-        $registrar->password = $request->input("password");
-        $registrar->user_type = $request->input("user_type");
-        $registrar->save();
+        $division = new Division_Model;
+        $division->division_name = $request->input("division_name");
+        $division->division_name_bangla = strval($request->input("division_name_bangla"));
+        $division->division_code = $request->input("division_code");
+        //$division->update_at = $request->input("update_at");
+        //echo $division->division_name_bangla;die;
+        $division->save();
 
-        return redirect('/registrar')->with('success', 'Registration Successful');
+        return redirect('/division')->with('success', 'Division Inserted Successful');
     }
 
     /**
@@ -63,17 +55,9 @@ class RegistrationController extends Controller
      */
     public function show($id)
     {
-        echo "user with login id";
+        //
     }
 
-    public function login()
-    {
-        $data = array(
-            'headline' => "BD Model Test", 
-            'slogan' => "A handy tool to test your skills", 
-        );
-        return view("registration.login")->with($data);
-    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -82,7 +66,8 @@ class RegistrationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $division = Division_Model::find($id);
+        return view('DivisionController@update')->width($division);
     }
 
     /**

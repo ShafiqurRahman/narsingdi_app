@@ -13,7 +13,7 @@
                 <div class="col-xs-12 col-sm-4 pull-right">
                     <p class="log-reg pull-right">
                         
-                        <a href="{{url('/login')}}">Login</a> <span>|</span><a href="  {{url('/sign_up')}} ">Registration</a>
+                        <a href="{{url('/login')}}">Login</a> <span>|</span><a href="  {{url('/create')}} ">Registration</a>
                         
                         <a href="{{url('logout')}}">Logout</a>
                         

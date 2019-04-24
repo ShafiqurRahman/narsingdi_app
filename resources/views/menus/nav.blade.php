@@ -29,10 +29,10 @@
                                                 </div>
                                                 <div class="navbar-collapse collapse">
                                                     <ul class="nav navbar-nav">
-                                                    <li class="  first"><a href="{{url('/about')}}">About Us</a></li>
-                                                    <li class="  item-2"><a href="{{url('/model_tests')}}">Model Test</a></li>
-                                                        <li class="  item-3"><a href="{{url('/teachers')}}">Teachers</a></li>
-                                                        <li class="  item-3"><a href="{{url('/students')}}">Students</a></li>
+                                                    <li class="  first"><a href="{{url('/division')}}">Division</a></li>
+                                                    <li class="  item-2"><a href="{{url('/district')}}">District</a></li>
+                                                        <li class="  item-3"><a href="{{url('/upozilla')}}">Upozilla</a></li>
+                                                        <li class="  item-3"><a href="{{url('/union')}}">Union</a></li>
                                                         <li class="  item-4"><a href="{{url('/blogs')}}">Blog</a></li>
                                                         <li class=" last item-5"><a href="{{url('/contact_us')}}">Contact Us</a></li>
                                                     </ul>                                </div>

@@ -14,34 +14,34 @@ class PagesController extends Controller
        
         return view('pages.index')->with( $headline);
     }
-    public function about() {
+    public function division() {
         $headline = array(
             'headline' => "BD Model Test",
             'slogan' => "A handy tool to test your skills",
         );
         
-        return view('pages.about')->with($headline);
+        return view('pages.division')->with($headline);
     }
-    public function model_tests() {
+    public function district() {
         $headline = array(
             'headline' => "BD Model Test",
             'slogan' => "A handy tool to test your skills",
         );
-        return view('pages.model_tests')->with($headline);
+        return view('pages.district')->with($headline);
     }
-    public function teachers() {
+    public function upozilla() {
         $headline = array(
             'headline' => "BD Model Test",
             'slogan' => "A handy tool to test your skills",
         );
-        return view('pages.teachers')->with( $headline );
+        return view('pages.upozilla')->with( $headline );
     }
-    public function students() {
+    public function union() {
         $headline = array(
             'headline' => "BD Model Test",
             'slogan' => "A handy tool to test your skills",
         );
-        return view('pages.students')->with( $headline );
+        return view('pages.union')->with( $headline );
     }
     public function blogs() {
         $headline = array(

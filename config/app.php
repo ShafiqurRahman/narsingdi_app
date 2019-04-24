@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'BD Modeltest'),
+    'name' => env('APP_NAME', 'Narsingdi App'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/bdmodeltest/public'),
+    'url' => env('APP_URL', 'http://narsingdi.bdmodeltests.com/public/'),
 
-    /*
+    /*  local link: http://localhost/narsingdi_app/public
     |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
